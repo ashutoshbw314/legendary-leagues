@@ -1,3 +1,19 @@
+/*
+// The following function is used to extract logo urls based on id
+async function getLogoURLS() {
+  const res = await fetch('https://www.thesportsdb.com/api/v1/json/1/all_leagues.php');
+  const data = await res.json();
+  const leagues = data.leagues;
+  let promises = leagues.map(l => {
+    return fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${l.idLeague}`)
+      .then(res => res.json())
+      .then(data => [l.idLeague, data.leagues[0].strLogo?.split("/")[7]?.slice(0, -4)])
+  });
+  const result = await Promise.all(promises);
+  console.log(JSON.stringify(result, null, 2));
+}
+*/
+
 export default class LogoPics {
   constructor() {
     this.data = [
