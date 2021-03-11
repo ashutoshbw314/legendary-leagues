@@ -8,7 +8,7 @@ import slug from 'slug';
 
 const useStyles = makeStyles({
   root: {
-    width: '330px',
+    width: '290px',
     height: '350px',
     backgroundColor: '#ff5f6d',
     backgroundImage: 'linear-gradient(to top, #ff5f6d, #ffc371)',
